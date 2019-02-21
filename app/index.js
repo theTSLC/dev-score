@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-require ('index.css');
+require ('index.css'); // works here because of 'syle-loader' in webpack.config
 
 class App extends React.Component {
     render () {
