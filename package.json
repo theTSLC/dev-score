@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/theTSLC/dev-score#readme",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
