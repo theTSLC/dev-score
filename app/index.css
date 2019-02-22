@@ -1,28 +1,28 @@
 body {
-    /* background: plum;    */
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+  /* background: plum;    */
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
 }
 
 ul {
-    padding: 0; /* removes automatic padding-left of 20  */
+  padding: 0; /* removes automatic padding-left of 20  */
 }
 
 li {
-    list-style-type: none; /* removes bullet points */
+  list-style-type: none; /* removes bullet points */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .languages {
-    display: flex; /* displays as row horizontally */
-    justify-content: center; /* aligns thing in the center horizonally */
+  display: flex; /* displays as row horizontally */
+  justify-content: center; /* aligns thing in the center horizonally */
 }
 
 .languages li {
-    margin: 10px;
-    font-weight: bold;
-    cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
