@@ -7,6 +7,7 @@ class Popular extends React.Component {
     this.state = {
       selectedLanguage: 'All' // defaults to All on component mount
     };
+    this.updateLanguage = this.updateLanguage.bind(this); // makes it so `this` keyword in updateLanguage is always the component instance itself, which will have a setState property
   }
   
   updateLanguage (language) {
@@ -23,11 +24,13 @@ class Popular extends React.Component {
       <ul className='languages'>
         {languages.map(function (language) {
           return (
-            <li key={language}>
+            <li 
+              onClick={this.updateLanguage.bind(null, language)}
+              key={language}>
               {language}
             </li>
           )
-        })}
+        }, this)}
       </ul>
     )
   }
