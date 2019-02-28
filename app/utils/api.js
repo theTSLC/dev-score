@@ -9,6 +9,6 @@ module.exports = {
       .then(function (response) {
         return response.data.items;
       });
-  } // end fetchPopularRepos
+  }
 
 }

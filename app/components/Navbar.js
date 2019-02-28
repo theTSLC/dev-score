@@ -1,6 +1,5 @@
 var React   = require('react');
-// var Link    = require('react-dom-router').Link; /*if no style changes necessary when active*/
-var NavLink = require('react-router-dom').NavLink; /*allows changing style based on if a is active*/
+var NavLink = require('react-router-dom').NavLink; /*versus .Link, allows changing style if <a> is active*/
 
 function Navbar () {
   return (
