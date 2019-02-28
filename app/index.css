@@ -39,7 +39,9 @@ li {
 }
 
 .popular-rank {
-  margin-bottom: 7px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .space-list-items {
