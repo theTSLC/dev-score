@@ -56,3 +56,10 @@ li {
 .repo-owner{
   margin: 2px 0 2px 0;
 }
+
+.loading-text {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 80px;
+}
