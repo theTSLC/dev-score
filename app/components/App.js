@@ -1,9 +1,10 @@
 var React       = require('react');
 var ReactRouter = require('react-router-dom');
 var Router      = ReactRouter.BrowserRouter;
-var Router      = ReactRouter.Route;
+var Route       = ReactRouter.Route;
 
 var Popular = require('./Popular');
+var Navbar  = require('./Navbar');
 
 
 class App extends React.Component {
@@ -11,6 +12,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className='container'>
+          <Navbar />
           <Route path='/popular' component={Popular} />
         </div>
       </Router>
