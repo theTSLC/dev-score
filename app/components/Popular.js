@@ -3,7 +3,7 @@ var PropTypes = require('prop-types');
 var api       = require('../utils/api');
 
 function SelectLanguage (props) {
-  var languages = ['All', 'JavaScript', 'Python', 'Go', 'R', 'HTML', 'CSS'];
+  var languages = ['All', 'JavaScript', 'Java', 'Python', 'HTML', 'CSS', 'Go', 'R'];
   return (
     <ul className='languages'>
       {languages.map(function (language) {
@@ -40,7 +40,7 @@ function RepoGrid (props) {
                   />
               </li>
               <li><a href={repo.html_url}>{repo.name}</a></li>
-              <li>@{repo.owner.login}</li>
+              <li className='repo-owner'>@{repo.owner.login}</li>
               <li>{repo.stargazers_count} stars</li>
             </ul>
           </li>

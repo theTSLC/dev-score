@@ -50,3 +50,7 @@ li {
   width: 150px;
   border-radius: 50%;
 }
+
+.repo-owner{
+  margin: 2px 0 2px 0;
+}
