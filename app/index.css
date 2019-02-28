@@ -15,6 +15,11 @@ a {
   text-decoration: none;
 }
 
+/* h2 {
+  display: flex;
+  justify-content: center;
+} */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -79,4 +84,33 @@ a {
 
 .active-link {
   font-weight: bold;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column; /* vertically instead of horizontally*/
+  align-items: center; /*horizontally*/
+}
+
+.button {
+  color: #e6e6e6;
+  background: #3366cc;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  margin: 10px auto;
+}
+
+ .button:hover:enabled {
+  background: linear-gradient(#759ae4,#3366cc);
+  color: #fff;
+  text-decoration: none;
+}
+
+ .button:active {
+  transform: translateY(1px);
 }
