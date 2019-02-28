@@ -11,6 +11,10 @@ li {
   list-style-type: none; /* removes bullet points */
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -62,4 +66,17 @@ li {
   display: flex;
   justify-content: center;
   margin: 80px;
+  font-style: italic;
+}
+
+.nav {
+  display: flex; /* aligns all itmes horizontally */
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+.active-link {
+  font-weight: bold;
 }
