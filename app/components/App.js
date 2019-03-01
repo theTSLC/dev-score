@@ -14,7 +14,7 @@ class App extends React.Component {
       <Router>
         <div className='container'>
           <Navbar />
-          <Route path='/'         component={Home} />
+          <Route exact path='/'   component={Home} />
           <Route path='/popular'  component={Popular} />
         </div>
       </Router>

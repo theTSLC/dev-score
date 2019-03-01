@@ -93,7 +93,7 @@ class Popular extends React.Component {
           onSelect = {this.updateLanguage} 
         />
         {!this.state.repos 
-          ? <p className='loading-text'>Talking to github...</p>
+          ? <p className='loading-text'>talking to github...</p>
           : <RepoGrid repos={this.state.repos} />
         }
       </div>
