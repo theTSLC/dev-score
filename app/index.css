@@ -19,6 +19,11 @@ a {
   margin: 0 auto;
 }
 
+.row {
+  display: flex; /*display all child components horizontally*/
+  justify-content: space-around; /*evenly space them out*/
+}
+
 .languages {
   display: flex; /* displays as row horizontally */
   justify-content: center; /* aligns thing in the center horizonally */
