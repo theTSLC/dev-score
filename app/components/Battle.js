@@ -2,31 +2,7 @@ var React     = require('react');
 var PropTypes = require('prop-types');
 var Link      = require('react-router-dom').Link;
 
-function PlayerPreview (props) { //non reusable stateless functional component so no new file
-  return (
-    <div>
-      <div className='column'>
-        <img
-          className='avatar'
-          src={props.avatar}
-          alt={'Avatar for ' + props.username}
-        />
-        <h2 className='username'>@{props.username}</h2>
-      </div>
-      <button
-        className='reset'
-        onClick={props.onReset.bind(null, props.id)}>
-        Reset
-      </button>
-    </div>
-  )
-}
-PlayerPreview.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired,
-  id: PropTypes.string.isRequired
-}
+var PlayerPreview = require('./PlayerPreview');
 
 class PlayerInput extends React.Component { //non reusable child component so no new file
   constructor(props) {
@@ -37,7 +13,7 @@ class PlayerInput extends React.Component { //non reusable child component so no
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  
   handleChange(event) {
     var value = event.target.value;
 
@@ -93,7 +69,6 @@ PlayerInput.defaultProps = {
 class Battle extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       player1Name : '',
       player1Image: null,
