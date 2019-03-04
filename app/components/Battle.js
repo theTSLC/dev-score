@@ -6,7 +6,7 @@ function PlayerPreview (props) { //non reusable stateless functional component s
     <div>
       <div className='column'>
         <img
-          className='avaatar'
+          className='avatar'
           src={props.avatar}
           alt={'Avatar for ' + props.username}
         />
@@ -97,18 +97,27 @@ class Battle extends React.Component {
       player1Name : '',
       player1Image: null,
       player2Name : '',
-      payer2Image : null
+      player2Image : null
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset  = this.handleReset.bind(this);
   }
 
   handleSubmit(id, username) {
     this.setState(function () {
       var newState = {};
       newState[id + 'Name'] = username;
-      newState[id + 'Image'] = 'https://github.com/' + username + '.pgn?size=200';
+      newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
       return newState;
+    });
+  }
+
+  handleReset(id) {
+    this.setState(function () {
+      var newState = {};
+      newState[id + 'Name'] = '';
+      newState[id + 'Image'] = null;
     });
   }
 
