@@ -1,6 +1,32 @@
 var React     = require('react');
 var PropTypes = require('prop-types');
 
+function PlayerPreview (props) { //non reusable stateless functional component so no new file
+  return (
+    <div>
+      <div className='column'>
+        <img
+          className='avaatar'
+          src={props.avatar}
+          alt={'Avatar for ' + props.username}
+        />
+        <h2 className='username'>@{props.username}</h2>
+      </div>
+      <button
+        className='reset'
+        onClick={props.onReset.bind(null, props.id)}>
+        Reset
+      </button>
+    </div>
+  )
+}
+PlayerPreview.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  onReset: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired
+}
+
 class PlayerInput extends React.Component { //non reusable child component so no new file
   constructor(props) {
     super(props);
@@ -47,8 +73,7 @@ class PlayerInput extends React.Component { //non reusable child component so no
         <button 
           className='button'
           type='submit'
-          disabled={!this.state.username}
-        >
+          disabled={!this.state.username}>
           Submit
         </button>
       </form>
@@ -90,6 +115,8 @@ class Battle extends React.Component {
   render() {
     var player1Name = this.state.player1Name;
     var player2Name = this.state.player2Name;
+    var player1Image= this.state.player1Image;
+    var player2Image= this.state.player2Image;
 
     return (
       <div>
@@ -101,12 +128,28 @@ class Battle extends React.Component {
               onSubmit={this.handleSubmit}
             />
           }
+          {player1Image !== null &&
+            <PlayerPreview 
+              id='player1'
+              avatar={player1Image}
+              username={player1Name}
+              onReset={this.handleReset}
+            />
+          }
 
           {!player2Name &&
             <PlayerInput 
               id='player2'
               label='Player Two'
               onSubmit={this.handleSubmit}
+            />
+          }
+          {player2Image !== null &&
+            <PlayerPreview
+              id='player2'
+              avatar={player2Image}
+              username={player2Name}
+              onReset={this.handleReset}
             />
           }
         </div>
