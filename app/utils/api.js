@@ -17,7 +17,7 @@ function getRepos (username) {
 
 function getStarCount (repos) {
   return repos.data.reduce(function (count, repo) {
-    return count + repo.startgazers_count;
+    return count + repo.stargazers_count;
   }, 0);
 }
 
@@ -61,7 +61,7 @@ module.exports = {
       .then(sortPlayers)
       .catch(handleError)
   },
-  
+
   fetchPopularRepos: function (language) {
     var encodedURI = window.encodeURI('https://api.github.com/search/repositories?q=stars:>1+language:' + language + '&sort=star&order=desc&type=Repositories');
 
