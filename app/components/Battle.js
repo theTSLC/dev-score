@@ -1,5 +1,6 @@
 var React     = require('react');
 var PropTypes = require('prop-types');
+var Link      = require('react-router-dom').Link;
 
 function PlayerPreview (props) { //non reusable stateless functional component so no new file
   return (
@@ -122,6 +123,7 @@ class Battle extends React.Component {
   }
 
   render() {
+    var match = this.props.match;
     var player1Name = this.state.player1Name;
     var player2Name = this.state.player2Name;
     var player1Image= this.state.player1Image;
@@ -162,6 +164,17 @@ class Battle extends React.Component {
             />
           }
         </div>
+
+        {player1Image && player2Image &&
+          <Link
+            className='button'
+            to={{
+              pathname: match.url + '/results',
+              search: '?player1Name=' + player1Name + '&player2Name=' + player2Name
+            }}>
+            Battle
+          </Link>
+        }
       </div>
     )
   }
