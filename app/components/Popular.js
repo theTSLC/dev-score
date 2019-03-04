@@ -3,13 +3,13 @@ var PropTypes = require('prop-types');
 var api       = require('../utils/api');
 
 function SelectLanguage (props) {
-  var languages = ['All', 'JavaScript', 'TypeScript', 'Java', 'Python', 'HTML', 'CSS', /*'Go', 'R'*/];
+  var languages = ['All', 'JavaScript', /*'TypeScript',*/ 'Java', 'Python', 'HTML', 'CSS', /*'Go', 'R'*/];
   return (
     <ul className='languages'>
       {languages.map(function (language) {
         return (
           <li 
-          style={language === props.selectedLanguage ? {color: 'plum'} : null}
+          style={language === props.selectedLanguage ? {color: '#3366cc'} : null}
           onClick={props.onSelect.bind(null, language)}
           key={language}>
             {language}
