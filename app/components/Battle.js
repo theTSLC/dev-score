@@ -119,6 +119,7 @@ class Battle extends React.Component {
       var newState = {};
       newState[id + 'Name'] = '';
       newState[id + 'Image'] = null;
+      return newState;
     });
   }
 
