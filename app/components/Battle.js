@@ -13,7 +13,7 @@ class PlayerInput extends React.Component { //non reusable child component so no
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
+
   handleChange(event) {
     var value = event.target.value;
 
@@ -117,11 +117,14 @@ class Battle extends React.Component {
           }
           {player1Image !== null &&
             <PlayerPreview 
-              id='player1'
               avatar={player1Image}
-              username={player1Name}
-              onReset={this.handleReset}
-            />
+              username={player1Name}>
+                <button
+                  className='reset'
+                  onClick={this.handleReset.bind(this, 'player1')}>
+                    Reset
+                </button>
+            </PlayerPreview>
           }
 
           {!player2Name &&
@@ -133,11 +136,14 @@ class Battle extends React.Component {
           }
           {player2Image !== null &&
             <PlayerPreview
-              id='player2'
               avatar={player2Image}
-              username={player2Name}
-              onReset={this.handleReset}
-            />
+              username={player2Name}>
+                <button
+                  className='reset'
+                  onClick={this.handleReset.bind(this, 'player2')}>
+                    Reset
+                </button>
+            </PlayerPreview>
           }
         </div>
 
