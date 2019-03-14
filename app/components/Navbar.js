@@ -1,7 +1,7 @@
-var React   = require('react');
-var NavLink = require('react-router-dom').NavLink; /*versus .Link, allows changing style if <a> is active*/
+import React from 'react';
+import { NavLink } from 'react-router-dom'; /*versus .Link, allows changing style if <a> is active*/
 
-function Navbar () {
+export default function Navbar () {
   return (
     <ul className='nav'>
       <li>
@@ -22,5 +22,3 @@ function Navbar () {
     </ul>
   )
 }
-
-module.exports = Navbar;

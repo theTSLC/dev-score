@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-require ('./index.css'); // works here because of webpack 'style-loader'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css' // works here because of webpack 'style-loader'
 
-var App = require('./components/App');
+import App from './components/App'
 
 ReactDOM.render(<App />, document.getElementById('app'));

@@ -1,11 +1,11 @@
-const React       = require('react');
-const PropTypes   = require('prop-types');
-const queryString = require('query-string');
-const Link        = require('react-router-dom').Link;
-const api         = require('../utils/api');
+import React       from 'react';
+import PropTypes   from 'prop-types';
+import queryString from 'query-string';
+import { Link }    from 'react-router-dom';
+import { battle }         from '../utils/api';
 
-const PlayerPreview = require('./PlayerPreview');
-const Loading       = require('./Loading');
+import PlayerPreview from './PlayerPreview';
+import Loading       from './Loading';
 
 function Profile ({ info }) { //non reused stateless functional component so no new file needed
   const { avatar_url, login, name, location, company, followers, following, public_repos, blog } = info;
@@ -56,7 +56,7 @@ class Results extends React.Component {
   componentDidMount() {
     const { player1Name, player2Name } = queryString.parse(this.props.location.search);
 
-    api.battle([
+    battle([
       player1Name,
       player2Name
     ]).then((results) => {
@@ -109,4 +109,4 @@ class Results extends React.Component {
   }
 }
 
-module.exports = Results;
+export default Results;
