@@ -1,14 +1,14 @@
 var React       = require('react');
 var ReactRouter = require('react-router-dom');
 var Router      = ReactRouter.BrowserRouter;
-var Route       = ReactRouter.Route;
-var Switch      = ReactRouter.Switch;
+const Route       = ReactRouter.Route;
+const Switch      = ReactRouter.Switch;
 
-var Navbar  = require('./Navbar');
-var Home    = require('./Home');
-var Battle  = require('./Battle');
-var Results = require('./Results');
-var Popular = require('./Popular');
+const Navbar  = require('./Navbar');
+const Home    = require('./Home');
+const Battle  = require('./Battle');
+const Results = require('./Results');
+const Popular = require('./Popular');
 
 
 class App extends React.Component {
@@ -22,9 +22,7 @@ class App extends React.Component {
             <Route exact path='/battle'           component={Battle} />
             <Route       path='/battle/results/'  component={Results} />
             <Route       path='/popular'          component={Popular} />
-            <Route render={function() {
-              return <p>Not found</p>
-            }} />
+            <Route render={() => <p>Not found</p>} />
           </Switch>
         </div>
       </Router>
