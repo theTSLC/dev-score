@@ -5,21 +5,24 @@ import { Link }  from 'react-router-dom';
 import PlayerPreview from './PlayerPreview';
 
 class PlayerInput extends React.Component { //non reusable child component so no new file
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: ''
-    }
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  static propTypes = {
+    id : PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    onSubmit: PropTypes.func.isRequired
+  }
+  static defaultProps = {
+    label: 'Username'
+  }
+  state = {
+    username : ''
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     const value = event.target.value;
     this.setState(() => ({username : value}));
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) =>  {
     event.preventDefault(); //prevent submit to server or anything
 
     this.props.onSubmit(
@@ -54,37 +57,23 @@ class PlayerInput extends React.Component { //non reusable child component so no
     )
   }
 }
-PlayerInput.propTypes = {
-  id : PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  onSubmit: PropTypes.func.isRequired
-}
-PlayerInput.defaultProps = {
-  label: 'Username'
-}
 
 class Battle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      player1Name : '',
-      player1Image: null,
-      player2Name : '',
-      player2Image : null
-    }
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleReset  = this.handleReset.bind(this);
+  state = {
+    player1Name : '',
+    player1Image: null,
+    player2Name : '',
+    player2Image : null
   }
 
-  handleSubmit(id, username) {
+  handleSubmit = (id, username) => {
     this.setState(() => ({
       [id + 'Name']: username,
       [id + 'Image']: `https://github.com/${username}.png?size=200`
     })); 
   }
 
-  handleReset(id) {
+  handleReset = (id) => {
     this.setState(() => ({
       [id + 'Name']: '',
       [id + 'Image']: null

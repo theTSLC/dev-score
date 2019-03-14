@@ -54,21 +54,16 @@ RepoGrid.propTypes = {
 }
 
 class Popular extends React.Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedLanguage: 'All', // defaults to All on component mount
-      repos: null
-    };
-    this.updateLanguage = this.updateLanguage.bind(this); // makes it so `this` keyword in updateLanguage is always the component instance itself, which will have a setState property
+  state = {
+    selectedLanguage: 'All', // defaults to All on component mount
+    repos: null
   }
 
   componentDidMount() {
     this.updateLanguage(this.state.selectedLanguage);
   }
   
-  updateLanguage (language) {
+  updateLanguage = (language) => {
     this.setState(() =>  ({
         selectedLanguage: language,
         repos: null
