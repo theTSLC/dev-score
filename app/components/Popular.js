@@ -12,7 +12,7 @@ function SelectLanguage ({ selectedLanguage, onSelect }) {
         return (
           <li 
           style={language === selectedLanguage ? {color: '#3366cc'} : null}
-          onClick={() => onSelect(null, language)}
+          onClick={() => onSelect(language)}
           key={language}>
             {language}
           </li>
@@ -63,15 +63,15 @@ class Popular extends React.Component {
     this.updateLanguage(this.state.selectedLanguage);
   }
   
-  updateLanguage = (language) => {
+  updateLanguage = async (language) => {
     this.setState(() =>  ({
         selectedLanguage: language,
         repos: null
     }));
 
-    fetchPopularRepos(language)
-      .then((repos) => this.setState(() => ({ repos })));
-  } // end updateLanguage
+    const repos = await fetchPopularRepos(language);
+    this.setState(() => ({ repos }));
+  } 
   
   render() {
     const { selectedLanguage, repos } = this.state;
