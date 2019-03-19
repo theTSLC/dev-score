@@ -1,5 +1,5 @@
 # dev-score
-A modern React and ES6 manually configured [application](https://dev-score.firebaseapp.com/) that allows you to view the world's most popular repos for multiple languages and battle two Github profiles
+A modern React and ES6 [no boilerplate app](https://dev-score.firebaseapp.com/) that allows you to view the world's most popular repos for multiple languages and battle two Github profiles
 
 #### Modern React: 
   * React v16.3
