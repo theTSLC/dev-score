@@ -3,15 +3,15 @@ body {
 }
 
 ul {
-  padding: 0; /* removes automatic padding-left of 20  */
+  padding: 0; 
 }
 
 li {
-  list-style-type: none; /* removes bullet points */
+  list-style-type: none; 
 }
 
 a {
-  text-decoration: none; /*removes underline links*/
+  text-decoration: none; 
   color: #d0021b;
 
 }
@@ -22,15 +22,15 @@ a {
 }
 
 .row {
-  display: flex; /*display all child elements horizontally*/
-  justify-content: space-around; /*evenly space them out*/
+  display: flex; 
+  justify-content: space-around; 
 }
 
 .column {
   display: flex;
-  flex-direction: column; /*align everything vertically*/
+  flex-direction: column; 
   width: 500px;
-  align-items: center; /*align everything horizontally*/
+  align-items: center; 
 }
 
 .column input {
@@ -55,8 +55,8 @@ a {
 }
 
 .languages {
-  display: flex; /* displays as row horizontally */
-  justify-content: center; /* aligns thing in the center horizonally */
+  display: flex; 
+  justify-content: center; 
 }
 
 .languages li {
@@ -67,8 +67,8 @@ a {
 
 .popular-list {
   display: flex;
-  flex-wrap: wrap; /* creates grid effect */
-  justify-content: space-around; /* space each item evenly horizontally */
+  flex-wrap: wrap; 
+  justify-content: space-around; 
 }
 
 .popular-item {
@@ -84,6 +84,9 @@ a {
 
 .space-list-items {
   margin-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .avatar {
@@ -104,7 +107,7 @@ a {
 }
 
 .nav {
-  display: flex; /* aligns all itmes horizontally */
+  display: flex; 
 }
 
 .nav li {
@@ -117,8 +120,8 @@ a {
 
 .home-container {
   display: flex;
-  flex-direction: column; /* vertically instead of horizontally*/
-  align-items: center; /*horizontally*/
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .button {
