@@ -1,9 +1,9 @@
 # dev-score
-A modern React and ES6 [no boilerplate app](https://dev-score.firebaseapp.com/) that allows you to view the world's most popular repos for multiple languages and battle two Github profiles
+A super simple React and ES6 [no boilerplate app](https://dev-score.firebaseapp.com/) that allows you to view the world's most popular repos for multiple languages and battle two Github profiles
 
 ![Popular repos](/resources/popular-repos.png?raw=true "Popular repos")
 
-#### Modern React: 
+#### (previously) Modern React: 
   * React v16.3
   * Wepback, Babel
   * React Router
@@ -11,7 +11,7 @@ A modern React and ES6 [no boilerplate app](https://dev-score.firebaseapp.com/) 
   * Dynamic Rendering
   * Form Encapsulation
   
-#### ES6:
+#### (once new) ES6:
   * Destructuring
   * Template literals
   * Arrow functions
